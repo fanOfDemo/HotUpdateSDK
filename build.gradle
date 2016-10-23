@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0'
+        //start----------插件相关的，用来生成sdk-jar的------------------
+        //这是使用buildJar任务的远程依赖，用来打sdk的jar用的，源码在https://github.com/iReaderAndroid/buildJar
+        classpath 'com.adison.gradleplugin:jar:1.0.1'
+        // end----------插件相关的，用来生成sdk-jar的------------------
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

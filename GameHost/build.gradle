@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'jar-gradle-plugin'//生成jar包插件
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.yw.game.sdk.demo"
+        minSdkVersion 8
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    /**
+     * --PLUG-resoure-proguard 表示资源混淆，去掉则资源不混淆
+     * --PLUG-resoure-id  表示资源id命名（Package ID），后面参数表示对应资源id，去掉则为系统应用默认id'0x7f'
+     */
+    //去掉为了让demo不需要替换aapt就可以运行
+    //    aaptOptions.additionalParameters '--PLUG-resoure-proguard', '--PLUG-resoure-id', '0x7f'
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile project(':GameSDK')
+    compile project(':ZeusPlugin')
+}
+
+
+//start----------插件相关的，用来生成sdk-jar的------------------
+//具体使用参见https://github.com/iReaderAndroid/buildJar
+BuildJar{
+    //输出目录
+    outputFileDir= project.buildDir.path+"/jar"
+    //输出原始jar包名
+    outputFileName="sdk.jar"
+    //输出混淆jar包名
+    outputProguardFileName="sdk_proguard.jar"
+    //混淆配置
+    proguardConfigFile="proguard-rules.pro"
+    //是否需要默认的混淆配置proguard-android.txt
+    needDefaultProguard=true
+
+//    applyMappingFile="originMapping/mapping.txt"
+    //需要输出jar的包名列表,当此参数为空时，则默认全项目输出,支持多包,如 includePackage=['com/adison/testjarplugin/include','com/adison/testjarplugin/include1'...]
+//    includePackage=['com/adison/testjarplugin/include']
+//    //不需要输出jar的jar包列表,如['baidu.jar','baidu1.jar'...]
+//    excludeJar=[]
+//    //不需要输出jar的类名列表,如['baidu.calss','baidu1.class'...]
+//    excludeClass=['com/adison/testjarplugin/TestExcude.class']
+//    //不需要输出jar的包名列表,如 excludePackage=['com/adison/testjarplugin/exclude','com/adison/testjarplugin/exclude1'...]
+    excludePackage=['com/ym/game/sdk/exclude','com/yw/game/sdk/demo/exclude','com/ym/game/sdk/exclude']
+}
+
+//end----------插件相关的，用来生成sdk-jar的------------------

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GameHost/GameHost.iml" filepath="$PROJECT_DIR$/GameHost/GameHost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDK/GameSDK.iml" filepath="$PROJECT_DIR$/GameSDK/GameSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameSDKPlugin/GameSDKPlugin.iml" filepath="$PROJECT_DIR$/GameSDKPlugin/GameSDKPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SDKLessenDemo.iml" filepath="$PROJECT_DIR$/SDKLessenDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZeusPlugin/ZeusPlugin.iml" filepath="$PROJECT_DIR$/ZeusPlugin/ZeusPlugin.iml" />
+    </modules>
+  </component>
+</project>
