@@ -23,9 +23,12 @@ android dialog /okhttp/retrofit 太多优秀的库了，一下子想不了那么
 
 ***
 
-###四、代理模式不会用？MVP你也看不懂!
+###四、策略者模式在SDK项目中的应用
 
-等我慢慢补上
+[策略者模式 一简单应用](http://wengyiming.cn/2016/06/14/android%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%AE%B2%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94%E7%AD%96%E7%95%A5%E8%80%85%E6%A8%A1%E5%BC%8F/)
+
+[策略者模式 二 - 结合插件化实现SDK热更新](http://wengyiming.cn/2016/10/21/%E7%83%AD%E6%9B%B4%E6%96%B0SDK%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/)
+
 
 ***
 
