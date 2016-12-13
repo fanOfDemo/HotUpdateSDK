@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.ym.game.sdk"
         minSdkVersion 9
-        targetSdkVersion 24
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
 
@@ -21,9 +21,6 @@ android {
         }
     }
 
-    //start-----插件相关-------------------
-    aaptOptions.additionalParameters '--PLUG-resoure-proguard', '--PLUG-resoure-id', '0x7d'
-    //end-------插件相关-------------------
 
     lintOptions {
         abortOnError false

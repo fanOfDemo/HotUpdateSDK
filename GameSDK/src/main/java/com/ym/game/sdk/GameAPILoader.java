@@ -1,37 +1,49 @@
-package com.ym.game.sdk.agame;
+package com.ym.game.sdk;
 
 import android.webkit.ValueCallback;
+
+import com.ym.game.sdk.agame.AGameAPI;
+import com.ym.game.sdk.bgame.BGameAPI;
 
 import org.json.JSONObject;
 
 import bridge.IGameAPI;
 
-
 /**
  * 项目名称：SDKLessenDemo
  * 类描述：
  * 创建人：wengyiming
- * 创建时间：16/6/14 下午11:18
+ * 创建时间：2016/10/22 上午1:54
  * 修改人：wengyiming
- * 修改时间：16/6/14 下午11:18
+ * 修改时间：2016/10/22 上午1:54
  * 修改备注：
  */
-    public class AGameAPI implements IGameAPI {
 
-        public static AGameAPI getAPI () {
-            return APIHolder.single;
+    public class GameAPILoader implements IGameAPI {
+
+        public static IGameAPI loadGameAPI () {
+            switch (readChannel ()) {
+                case 1:
+                    mAPI = AGameAPI.getAPI ();
+                    break;
+                case 2:
+                    mAPI = BGameAPI.getAPI ();
+                    break;
+            }
+
+            return mAPI;
         }
 
-        public AGameAPI () {
-
+        private static int readChannel () {
+            return 1;
         }
 
-        static class APIHolder {
-            static AGameAPI single = new AGameAPI ();
-        }
+        private static IGameAPI mAPI;
+
 
         @Override
         public void init (JSONObject jsonObject, ValueCallback<JSONObject> valueCallback) {
+
         }
 
         @Override
@@ -48,5 +60,4 @@ import bridge.IGameAPI;
         public void logout (JSONObject jsonObject, ValueCallback<JSONObject> valueCallback) {
 
         }
-
     }

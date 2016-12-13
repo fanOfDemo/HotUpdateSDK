@@ -21,32 +21,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
 
-        String className = PluginManager.getPlugin (PluginConfig.PLUGIN_TEST).getPluginMeta ()
-                .mainClass;
-        PluginManager.loadLastVersionPlugin (PluginConfig.PLUGIN_TEST);
-        try {
-            Class cl = PluginManager.mNowClassLoader.loadClass (className);
-            IGameAPI gameAPI = (IGameAPI) cl.newInstance ();
+            String className = PluginManager.getPlugin (PluginConfig.PLUGIN_TEST).getPluginMeta ()
+                    .mainClass;
+            PluginManager.loadLastVersionPlugin (PluginConfig.PLUGIN_TEST);
+            try {
+                Class cl = PluginManager.mNowClassLoader.loadClass (className);
+                IGameAPI gameAPI = (IGameAPI) cl.newInstance ();
 
-            gameAPI.init (null, new ValueCallback<JSONObject> () {
-                @Override
-                public void onReceiveValue (JSONObject value) {
+                gameAPI.init (null, new ValueCallback<JSONObject> () {
+                    @Override
+                    public void onReceiveValue (JSONObject value) {
 
-                }
-            });
+                    }
+                });
 
-            gameAPI.login (null, new ValueCallback<JSONObject> () {
-                @Override
-                public void onReceiveValue (JSONObject value) {
+                gameAPI.login (null, new ValueCallback<JSONObject> () {
+                    @Override
+                    public void onReceiveValue (JSONObject value) {
 
-                }
-            });
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace ();
-        } catch (InstantiationException e) {
-            e.printStackTrace ();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace ();
-        }
+                    }
+                });
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace ();
+            } catch (InstantiationException e) {
+                e.printStackTrace ();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace ();
+            }
     }
 }
