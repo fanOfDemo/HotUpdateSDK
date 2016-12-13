@@ -1,5 +1,5 @@
-# SDKLessenDemo
-#企业sdk开发课程
+# SDKLessen
+#热更新sdk开发设计与实践
 
 
 
