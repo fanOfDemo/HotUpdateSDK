@@ -34,6 +34,6 @@ android dialog /okhttp/retrofit 太多优秀的库了，一下子想不了那么
 
 <img src="https://github.com/fanOfDemo/HotUpdateSDK/blob/master/hotUpdate.png?raw=true" width="320" />
 
-<img src=" HotUpdateSDK/picture/yuewengameSDK.png" width="320" />
+<img src="HotUpdateSDK/picture/yuewengameSDK.png" width="320" />
 
 
