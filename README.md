@@ -29,6 +29,15 @@ android dialog /okhttp/retrofit 太多优秀的库了，一下子想不了那么
 
 [策略者模式 二 - 结合插件化实现SDK热更新](http://wengyiming.cn/2016/10/21/%E7%83%AD%E6%9B%B4%E6%96%B0SDK%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/)
 
+###五、插件化技术在SDK项目中的应用
+
+[插件化技术在SDK项目中的应用](http://wengyiming.cn/2016/10/21/%E7%83%AD%E6%9B%B4%E6%96%B0SDK%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5/)
+
+[插件化技术实现App模块化隔离一 -- 理论](http://wengyiming.cn/2016/12/05/APP%E6%8F%92%E4%BB%B6%E5%8C%96%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%80%A6%E4%B8%80/)
+
+[插件化技术实现App模块化隔离二 --实践](http://wengyiming.cn/2016/12/13/APP%E6%8F%92%E4%BB%B6%E5%8C%96%E6%A8%A1%E5%9D%97%E8%A7%A3%E8%80%A6%E4%BA%8C/)
+
+
 
 ***
 
