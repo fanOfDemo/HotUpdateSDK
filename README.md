@@ -32,7 +32,7 @@ android dialog /okhttp/retrofit 太多优秀的库了，一下子想不了那么
 
 ***
 
-
+[!热更新SDK](https://github.com/fanOfDemo/HotUpdateSDK/blob/master/hotUpdate.png?raw=true)
 
 
 
